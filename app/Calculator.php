@@ -14,4 +14,14 @@ class Calculator {
     {
         return $kilometers * self::MILE_IN_KILOMETER;
     }
+
+    public function ConvertMinutesToSeconds($minutes)
+    {
+        return $minutes * 60;
+    }
+
+    public function ConvertSecondsToMinutes($seconds)
+    {
+        return $seconds / 60;
+    }
 }
