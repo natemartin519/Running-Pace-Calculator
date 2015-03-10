@@ -6,7 +6,6 @@ include_once('app\Calculator.php');
 
 class CalculatorTest extends PHPUnit_Framework_TestCase {
 
-    const KILOMETRE_IN_MILE = 1.60934;
     const MILE_IN_KILOMETRE = 0.62137;
 
     protected $calculator;
@@ -14,20 +13,6 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
     public function setUp()
     {
         $this->calculator = new Calculator();
-    }
-
-    public function testConvertOneMileToKilometres()
-    {
-        $kilometres = $this->calculator->ConvertMileToKilometre(1);
-
-        $this->assertTrue($kilometres == self::KILOMETRE_IN_MILE);
-    }
-
-    public function testConvertTwoMilesToKilometres()
-    {
-        $kilometres = $this->calculator->ConvertMileToKilometre(2);
-
-        $this->assertTrue($kilometres == (self::KILOMETRE_IN_MILE * 2));
     }
 
     public function testConvertOneMinuteToSeconds()
@@ -57,12 +42,5 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
 
         $this->assertTrue($minutes == 1.5);
     }
-
-//    public function testConvertOneMileMinuteToKilometresMinute()
-//    {
-//        $kilometresMinute = $this->calculator->ConvertMilesMinuteToKilometresMinute(1);
-//        $this->assertTrue($kilometresMinute == 0);
-//    }
-
 
 }

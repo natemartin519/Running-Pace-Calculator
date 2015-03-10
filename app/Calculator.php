@@ -2,18 +2,7 @@
 
 class Calculator {
 
-    const KILOMETRE_IN_MILE = 1.60934;
     const SECONDS_IN_MINUTE = 60;
-
-    public function ConvertMileToKilometre($miles)
-    {
-        return $miles * self::KILOMETRE_IN_MILE;
-    }
-
-    public function ConvertKilometreToMile($kilometres)
-    {
-        return $kilometres * self::MILE_IN_KILOMETRE;
-    }
 
     public function ConvertMinutesToSeconds($minutes)
     {
