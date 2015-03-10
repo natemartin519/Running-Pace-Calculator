@@ -30,20 +30,6 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($kilometres == (self::KILOMETRE_IN_MILE * 2));
     }
 
-    public function testConvertOneKilometreToMiles()
-    {
-        $miles = $this->calculator->ConvertKilometreToMile(1);
-
-        $this->assertTrue($miles == self::MILE_IN_KILOMETRE);
-    }
-
-    public function testConvertTwoKilometresToMiles()
-    {
-        $miles = $this->calculator->ConvertKilometreToMile(2);
-
-        $this->assertTrue($miles == (self::MILE_IN_KILOMETRE * 2));
-    }
-
     public function testConvertOneMinuteToSeconds()
     {
         $seconds = $this->calculator->ConvertMinutesToSeconds(1);
@@ -71,5 +57,12 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
 
         $this->assertTrue($minutes == 1.5);
     }
+
+//    public function testConvertOneMileMinuteToKilometresMinute()
+//    {
+//        $kilometresMinute = $this->calculator->ConvertMilesMinuteToKilometresMinute(1);
+//        $this->assertTrue($kilometresMinute == 0);
+//    }
+
 
 }
