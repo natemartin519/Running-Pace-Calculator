@@ -6,8 +6,8 @@ include_once('app\Calculator.php');
 
 class CalculatorTest extends PHPUnit_Framework_TestCase {
 
-    const KILOMETER_IN_MILE = 1.60934;
-    const MILE_IN_KILOMETER = 0.62137;
+    const KILOMETRE_IN_MILE = 1.60934;
+    const MILE_IN_KILOMETRE = 0.62137;
 
     protected $calculator;
 
@@ -16,32 +16,32 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
         $this->calculator = new Calculator();
     }
 
-    public function testConvertOneMileToKilometers()
+    public function testConvertOneMileToKilometres()
     {
-        $kilometers = $this->calculator->ConvertMileToKilometer(1);
+        $kilometres = $this->calculator->ConvertMileToKilometre(1);
 
-        $this->assertTrue($kilometers == self::KILOMETER_IN_MILE);
+        $this->assertTrue($kilometres == self::KILOMETRE_IN_MILE);
     }
 
-    public function testConvertTwoMilesToKilometers()
+    public function testConvertTwoMilesToKilometres()
     {
-        $kilometers = $this->calculator->ConvertMileToKilometer(2);
+        $kilometres = $this->calculator->ConvertMileToKilometre(2);
 
-        $this->assertTrue($kilometers == (self::KILOMETER_IN_MILE * 2));
+        $this->assertTrue($kilometres == (self::KILOMETRE_IN_MILE * 2));
     }
 
-    public function testConvertOneKilometerToMiles()
+    public function testConvertOneKilometreToMiles()
     {
-        $miles = $this->calculator->ConvertKilometerToMile(1);
+        $miles = $this->calculator->ConvertKilometreToMile(1);
 
-        $this->assertTrue($miles == self::MILE_IN_KILOMETER);
+        $this->assertTrue($miles == self::MILE_IN_KILOMETRE);
     }
 
-    public function testConvertTwoKilometersToMiles()
+    public function testConvertTwoKilometresToMiles()
     {
-        $miles = $this->calculator->ConvertKilometerToMile(2);
+        $miles = $this->calculator->ConvertKilometreToMile(2);
 
-        $this->assertTrue($miles == (self::MILE_IN_KILOMETER * 2));
+        $this->assertTrue($miles == (self::MILE_IN_KILOMETRE * 2));
     }
 
     public function testConvertOneMinuteToSeconds()
@@ -65,12 +65,11 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($minutes == 1);
     }
 
-    public function testConvertNinetyFiveSecondsToMinutes()
+    public function testConvertNinetySecondsToMinutes()
     {
-        $minutes = $this->calculator->ConvertSecondsToMinutes(95);
+        $minutes = $this->calculator->ConvertSecondsToMinutes(90);
 
-        $this->assertTrue($minutes == (95 / 60));
+        $this->assertTrue($minutes == 1.5);
     }
-
 
 }

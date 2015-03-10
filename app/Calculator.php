@@ -2,26 +2,27 @@
 
 class Calculator {
 
-    const KILOMETER_IN_MILE = 1.60934;
-    const MILE_IN_KILOMETER = 0.62137;
+    const KILOMETRE_IN_MILE = 1.60934;
+    const MILE_IN_KILOMETRE = 0.62137;
+    const SECONDS_IN_MINUTE = 60;
 
-    public function ConvertMileToKilometer($miles)
+    public function ConvertMileToKilometre($miles)
     {
-        return $miles * self::KILOMETER_IN_MILE;
+        return $miles * self::KILOMETRE_IN_MILE;
     }
 
-    public function ConvertKilometerToMile($kilometers)
+    public function ConvertKilometreToMile($kilometres)
     {
-        return $kilometers * self::MILE_IN_KILOMETER;
+        return $kilometres * self::MILE_IN_KILOMETRE;
     }
 
     public function ConvertMinutesToSeconds($minutes)
     {
-        return $minutes * 60;
+        return $minutes * self::SECONDS_IN_MINUTE;
     }
 
     public function ConvertSecondsToMinutes($seconds)
     {
-        return $seconds / 60;
+        return $seconds / self::SECONDS_IN_MINUTE;
     }
 }
