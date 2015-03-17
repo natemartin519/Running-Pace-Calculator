@@ -3,8 +3,7 @@
 use App\KilometresInterface;
 use App\MilesInterface;
 
-include_once('app\KilometresInterface.php');
-include_once('app\MilesInterface.php');
+require 'vendor/autoload.php';
 
 class Miles implements KilometresInterface, MilesInterface {
 

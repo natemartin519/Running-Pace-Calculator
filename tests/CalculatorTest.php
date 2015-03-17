@@ -2,7 +2,7 @@
 
 use App\Calculator;
 
-include_once('app\Calculator.php');
+require 'vendor/autoload.php';
 
 class CalculatorTest extends PHPUnit_Framework_TestCase {
 

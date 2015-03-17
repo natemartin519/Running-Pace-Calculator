@@ -1,5 +1,5 @@
 <?php
 
 use App\Calculator;
-include_once('Calculator.php');
+require 'vendor/autoload.php';
 

@@ -2,7 +2,7 @@
 
 use App\Kilometres;
 
-include_once('app\Kilometres.php');
+require 'vendor/autoload.php';
 
 class KilometersTest extends \PHPUnit_Framework_TestCase {
 

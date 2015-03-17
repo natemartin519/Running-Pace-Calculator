@@ -1,7 +1,8 @@
 <?php
+
 use App\Miles;
 
-include_once('app\Miles.php');
+require 'vendor/autoload.php';
 
 class MilesTest extends PHPUnit_Framework_TestCase {
 
