@@ -1,6 +1,6 @@
 <?php
 
-use App\Kilometres;
+use App\Models\Kilometres;
 
 require 'vendor/autoload.php';
 

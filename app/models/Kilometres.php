@@ -1,7 +1,7 @@
-<?php namespace App;
+<?php namespace App\Models;
 
-use App\KilometresInterface;
-use App\MilesInterface;
+use App\Interfaces\KilometresInterface;
+use App\Interfaces\MilesInterface;
 
 require 'vendor/autoload.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Miles;
+use App\Models\Miles;
 
 require 'vendor/autoload.php';
 
