@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 class MilesTest extends PHPUnit_Framework_TestCase {
 
-    const KILOMETRE_IN_MILE = 1.60934;
+    const KILOMETRE_IN_MILE = 1.609344;
 
     public function testOneMileToKilometres()
     {

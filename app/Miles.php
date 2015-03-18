@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 
 class Miles implements KilometresInterface, MilesInterface {
 
-    const KILOMETRE_IN_MILE = 1.60934;
+    const KILOMETRE_IN_MILE = 1.609344;
 
     protected $miles;
 
