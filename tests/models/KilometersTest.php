@@ -4,7 +4,7 @@ use App\Models\Kilometres;
 
 require 'vendor/autoload.php';
 
-class KilometersTest extends \PHPUnit_Framework_TestCase {
+class KilometersTest extends PHPUnit_Framework_TestCase {
 
     const MILE_IN_KILOMETRE = 0.621371192;
 

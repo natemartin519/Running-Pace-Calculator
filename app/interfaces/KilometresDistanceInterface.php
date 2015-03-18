@@ -1,5 +1,5 @@
 <?php namespace App\Interfaces;
 
-interface KilometresInterface {
+interface KilometresDistanceInterface {
     public function kilometres();
 }

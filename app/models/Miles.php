@@ -1,11 +1,9 @@
 <?php namespace App\Models;
 
-use App\Interfaces\KilometresInterface;
-use App\Interfaces\MilesInterface;
+use App\Interfaces\KilometresDistanceInterface;
+use App\Interfaces\MilesDistanceInterface;
 
-require 'vendor/autoload.php';
-
-class Miles implements KilometresInterface, MilesInterface {
+class Miles implements KilometresDistanceInterface, MilesDistanceInterface {
 
     const KILOMETRE_IN_MILE = 1.609344;
 
