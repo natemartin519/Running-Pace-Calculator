@@ -32,5 +32,4 @@ class HoursTest extends PHPUnit_Framework_TestCase {
         $hours = new Hours(1.5);
         $this->assertTrue($hours->minutes() == 90);
     }
-
 }

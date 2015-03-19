@@ -5,8 +5,8 @@ use App\Interfaces\TimeInterface;
 
 class MetricPace {
 
-    protected $time;
     protected $distance;
+    protected $time;
 
     function __construct(KilometresDistanceInterface $distance, TimeInterface $time)
     {
@@ -19,8 +19,8 @@ class MetricPace {
         return round(($this->time->minutes() / $this->distance->kilometres()), 4);
     }
 
-    public function kilometreHour()
+    public function kilometresHour()
     {
-        return round($this->distance->kilometres() / $this->time->hours(), 4);//9.6560);
+        return round($this->distance->kilometres() / $this->time->hours(), 4);
     }
 }

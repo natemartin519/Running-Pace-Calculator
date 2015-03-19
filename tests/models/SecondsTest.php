@@ -32,6 +32,5 @@ class SecondsTest extends PHPUnit_Framework_TestCase {
         $seconds =new Seconds(90);
         $this->assertTrue($seconds->minutes() == 1.5);
     }
-
 }
 

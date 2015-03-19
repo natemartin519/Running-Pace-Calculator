@@ -23,5 +23,5 @@ class Kilometres implements KilometresDistanceInterface, MilesDistanceInterface 
     {
         return $this->kilometres * self::MILE_IN_KILOMETRE;
     }
-
 }
+

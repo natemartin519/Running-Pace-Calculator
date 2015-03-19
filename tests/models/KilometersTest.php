@@ -37,5 +37,4 @@ class KilometersTest extends PHPUnit_Framework_TestCase {
         $kilometres = new Kilometres(2);
         $this->assertTrue($kilometres->kilometres() == 2);
     }
-
 }

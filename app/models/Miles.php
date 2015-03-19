@@ -24,3 +24,4 @@ class Miles implements KilometresDistanceInterface, MilesDistanceInterface {
         return $this->miles;
     }
 }
+

@@ -8,16 +8,15 @@ use App\Models\Miles;
 
 require 'vendor/autoload.php';
 
-class MetricPaceTest extends \PHPUnit_Framework_TestCase
-{
+class MetricPaceTest extends PHPUnit_Framework_TestCase {
 
     public function testReturnMinutesKilometreGivenMinutesMile()
     {
-        $minuteKilometre = new MetricPace(new Miles(1), new Minutes(10));
-        $this->assertTrue($minuteKilometre->minutesKilometre() == 6.2137);
+        $minutesKilometre = new MetricPace(new Miles(1), new Minutes(10));
+        $this->assertTrue($minutesKilometre->minutesKilometre() == 6.2137);
 
-        $minuteKilometre = new MetricPace(new Miles(2), new Minutes(14));
-        $this->assertTrue($minuteKilometre->minutesKilometre() == 4.3496);
+        $minutesKilometre = new MetricPace(new Miles(2), new Minutes(14));
+        $this->assertTrue($minutesKilometre->minutesKilometre() == 4.3496);
     }
 
     public function testReturnMinutesKilometreGivenMilesHour()
@@ -41,29 +40,28 @@ class MetricPaceTest extends \PHPUnit_Framework_TestCase
     public function testReturnKilometresHourGivenMinutesMile()
     {
         $kilometresHour = new MetricPace(new Miles(1), new Minutes(10));
-        $this->assertTrue($kilometresHour->kilometreHour() == 9.6561);
+        $this->assertTrue($kilometresHour->kilometresHour() == 9.6561);
 
         $kilometresHour = new MetricPace(new Miles(2), new Minutes(15));
-        $this->assertTrue($kilometresHour->kilometreHour() == 12.8748);
+        $this->assertTrue($kilometresHour->kilometresHour() == 12.8748);
     }
 
     public function testReturnKilometresHourGivenMinutesKilometre()
     {
         $kilometresHour = new MetricPace(new Kilometres(1), new Minutes(6));
-        $this->assertTrue($kilometresHour->kilometreHour() == 10);
+        $this->assertTrue($kilometresHour->kilometresHour() == 10);
 
         $kilometresHour = new MetricPace(new Kilometres(3), new Minutes(15));
-        $this->assertTrue($kilometresHour->kilometreHour() == 12);
+        $this->assertTrue($kilometresHour->kilometresHour() == 12);
     }
 
     public function testReturnKilometresHourGivenMilesHour()
     {
         $kilometresHour = new MetricPace(new Miles(6), new Hours(1));
-        $this->assertTrue($kilometresHour->kilometreHour() == 9.6561);
+        $this->assertTrue($kilometresHour->kilometresHour() == 9.6561);
 
         $kilometresHour = new MetricPace(new Miles(10), new Hours(2));
-        $this->assertTrue($kilometresHour->kilometreHour() == 8.0467);
+        $this->assertTrue($kilometresHour->kilometresHour() == 8.0467);
     }
-
-
 }
+
