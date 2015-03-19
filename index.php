@@ -1,14 +1,31 @@
 <?php
 
+use App\Models\ImperialPace;
 use App\Models\Kilometres;
-use App\Models\Miles;
+use App\Models\MetricPace;
+use App\Models\Minutes;
 
 require 'vendor/autoload.php';
 
-$inputNumber = 3.25;
+$distance = new Kilometres(3.25);
+$time = new Minutes(15);
 
-$kilometre = new Kilometres($inputNumber);
-echo round($kilometre->kilometres(), 2) . 'km is ' . round($kilometre->miles(), 2) . 'miles.<br>';
+$pace = new MetricPace($distance, $time);
 
-$mile = new Miles($kilometre->miles());
-echo round($mile->miles(), 2) . 'miles is ' . round($mile->kilometres(), 2) . 'km.';
+echo $distance->kilometres() .
+    'km in ' . $time->minutes() .
+    ' minutes is ' .
+    round($pace->minutesKilometre(), 2) .
+    'min/km or ' .
+    round($pace->kilometresHour(), 2) .
+    'km/hour.<br>';
+
+$pace = new ImperialPace($distance, $time);
+
+echo $distance->kilometres() .
+    'km in ' . $time->minutes() .
+    ' minutes is ' .
+    round($pace->minutesMile(), 2) .
+    'min/mile or ' .
+    round($pace->milesHour(), 2) .
+    'mile/hour.<br>';
