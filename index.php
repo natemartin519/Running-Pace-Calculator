@@ -1,31 +1,37 @@
 <?php
 
+require 'vendor/autoload.php';
+
 use App\Models\ImperialPace;
 use App\Models\Kilometres;
 use App\Models\MetricPace;
+use App\Models\Miles;
 use App\Models\Minutes;
+use Slim\Slim;
 
-require 'vendor/autoload.php';
+$app = new Slim([
+    'templates.path' => './app/views',
+]);
 
-$distance = new Kilometres(3.25);
-$time = new Minutes(15);
+$app->get('/', function() use ($app) {
+    $app->render('index.php');
+});
 
-$pace = new MetricPace($distance, $time);
+$app->post('/miles', function() use ($app) {
+    $distance = new Kilometres($app->request->params('distance'));
+    $time = new Minutes($app->request->params('time'));
+    $pace = new ImperialPace($distance, $time);
 
-echo $distance->kilometres() .
-    'km in ' . $time->minutes() .
-    ' minutes is ' .
-    round($pace->minutesKilometre(), 2) .
-    'min/km or ' .
-    round($pace->kilometresHour(), 2) .
-    'km/hour.<br>';
+    echo $time->minutes() . ' Min/Km is ' . round($pace->minutesMile(), 2) . ' Min/Mile';
+});
 
-$pace = new ImperialPace($distance, $time);
+$app->post('/kilometres', function() use ($app) {
+    $distance = new Miles($app->request->params('distance'));
+    $time = new Minutes($app->request->params('time'));
+    $pace = new MetricPace($distance, $time);
 
-echo $distance->kilometres() .
-    'km in ' . $time->minutes() .
-    ' minutes is ' .
-    round($pace->minutesMile(), 2) .
-    'min/mile or ' .
-    round($pace->milesHour(), 2) .
-    'mile/hour.<br>';
+    echo $time->minutes() . ' Min/Km is ' . round($pace->minutesKilometre(), 2) . ' Min/Mile';
+});
+
+
+$app->run();
