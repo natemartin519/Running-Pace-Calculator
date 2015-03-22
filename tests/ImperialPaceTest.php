@@ -1,7 +1,7 @@
 <?php
 
+use App\ImperialPace;
 use App\Models\Hours;
-use App\Models\ImperialPace;
 use App\Models\Kilometres;
 use App\Models\Miles;
 use App\Models\Minutes;

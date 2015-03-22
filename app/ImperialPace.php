@@ -1,4 +1,4 @@
-<?php namespace App\Models;
+<?php namespace App;
 
 use App\Interfaces\MilesDistanceInterface;
 use App\Interfaces\TimeInterface;

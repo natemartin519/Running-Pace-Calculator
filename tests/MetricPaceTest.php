@@ -1,8 +1,8 @@
 <?php
 
+use App\MetricPace;
 use App\Models\Hours;
 use App\Models\Kilometres;
-use App\Models\MetricPace;
 use App\Models\Minutes;
 use App\Models\Miles;
 
