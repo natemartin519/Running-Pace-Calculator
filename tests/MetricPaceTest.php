@@ -6,9 +6,7 @@ use App\Models\Kilometres;
 use App\Models\Minutes;
 use App\Models\Miles;
 
-require 'vendor/autoload.php';
-
-class MetricPaceTest extends PHPUnit_Framework_TestCase {
+class MetricPaceTest extends TestCase {
 
     public function testReturnMinutesKilometreGivenMinutesMile()
     {

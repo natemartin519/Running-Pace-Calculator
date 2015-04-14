@@ -2,9 +2,7 @@
 
 use App\Models\Seconds;
 
-require 'vendor/autoload.php';
-
-class SecondsTest extends PHPUnit_Framework_TestCase {
+class SecondsTest extends TestCase {
 
     public function testConvertToSeconds()
     {

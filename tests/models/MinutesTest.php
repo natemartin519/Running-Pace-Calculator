@@ -2,9 +2,7 @@
 
 use App\Models\Minutes;
 
-require 'vendor/autoload.php';
-
-class MinutesTest extends PHPUnit_Framework_TestCase {
+class MinutesTest extends TestCase {
 
     public function testConvertToSeconds()
     {

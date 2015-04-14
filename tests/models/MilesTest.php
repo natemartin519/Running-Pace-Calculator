@@ -2,9 +2,7 @@
 
 use App\Models\Miles;
 
-require 'vendor/autoload.php';
-
-class MilesTest extends PHPUnit_Framework_TestCase {
+class MilesTest extends TestCase {
 
     const KILOMETRE_IN_MILE = 1.609344;
 
